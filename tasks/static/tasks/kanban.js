@@ -1,7 +1,4 @@
-var $1tasks = $('#1tasks');
-var $2tasks = $('#2tasks');
-var $3tasks = $('#3tasks');
-var $4tasks = $('#4tasks');
+var $tasks = $('#tasks');
 
 
 function getCookie(name) {
@@ -32,58 +29,26 @@ $.ajaxSetup({
         }
     }
 });
-deleteButton = $('<button />').addClass('deleteButton').text('Delete');
-
-$.get('http://localhost:8000/api/tasks/', function(tasks){
-  tasks.results.forEach(function(task) {
-    if (task.priority==1) {
-    console.log(task)
-    var $li = $('<li>');
-    $li.text(task.title);
-    $li.appendTo($1tasks);
-  }
-})
-})
-
-$.get('http://localhost:8000/api/tasks/', function(tasks){
-  tasks.results.forEach(function(task) {
-    if (task.priority==2) {
-    console.log(task)
-    var $li = $('<li>');
-    $li.text(task.title);
-    $li.appendTo($2tasks);
-  }
-})
-})
 
 
 $.get('http://localhost:8000/api/tasks/', function(tasks){
   tasks.results.forEach(function(task) {
-    if (task.priority==3) {
     console.log(task)
     var $li = $('<li>');
     $li.text(task.title);
-    $li.appendTo($3tasks);
-  }
+    $li.click(function(){
+      alert("The paragraph was clicked.");
+    });
+    $li.appendTo($tasks);
+    var $button = $('<button>')
+    $button.text('Edit')
+    $button.appendTo($tasks)
+
 })
 })
 
 
-$.get('http://localhost:8000/api/tasks/', function(tasks){
-  tasks.results.forEach(function(task) {
-    if (task.priority==4) {
-    console.log(task)
-    var $li = $('<li>');
-    $li.text(task.title);
-    $li.appendTo($4tasks);
-  }
-})
-})
-
-
-
-
-var $task = $('#1task');
+var $task = $('#task');
 var $title = $('input[name="title"]');
 var $priority = $('input[name="priority"]');
 var $status =  $('input[name="status"]');
@@ -110,112 +75,11 @@ $task.submit(function() {
       var $li = $('<li>');
       $li.text(newTask.title)
       $li.appendTo($tasks);
+      $('input[type="text"],textarea').val('');
+      $('select').find('option').prop("selected", false);
+      $('input[type=radio]').prop("checked", false);
     }
   });
-  //
-  //
-  // var $task = $('#2task');
-  // var $title = $('input[name="title"]');
-  // var $priority = $('input[name="priority"]');
-  // var $status =  $('input[name="status"]');
-  // var $description = $('input[name="description"]');
-  //
-  //
-  // $task.submit(function() {
-  //   console.log('you submitted the form');
-  //
-  //
-  //   $.ajax({
-  //     method: 'post',
-  //     url: 'http://localhost:8000/api/tasks/',
-  //     // username: 'david',
-  //     // password: 'password123',
-  //     data: {
-  //       title: $title.val(),
-  //       priority: $priority.val() ,
-  //       status: $status.val(),
-  //       description: $description.val()
-  //     },
-  //     success: function(newTask) {
-  //       console.log(newTask)
-  //       var $li = $('<li>');
-  //       $li.text(newTask.title)
-  //       $li.appendTo($tasks);
-  //     }
-  //   });
-  //
-  //   var $task = $('#3task');
-  //   var $title = $('input[name="title"]');
-  //   var $priority = $('input[name="priority"]');
-  //   var $status =  $('input[name="status"]');
-  //   var $description = $('input[name="description"]');
-  //
-  //
-  //   $task.submit(function() {
-  //     console.log('you submitted the form');
-  //
-  //
-  //     $.ajax({
-  //       method: 'post',
-  //       url: 'http://localhost:8000/api/tasks/',
-  //       // username: 'david',
-  //       // password: 'password123',
-  //       data: {
-  //         title: $title.val(),
-  //         priority: $priority.val() ,
-  //         status: $status.val(),
-  //         description: $description.val()
-  //       },
-  //       success: function(newTask) {
-  //         console.log(newTask)
-  //         var $li = $('<li>');
-  //         $li.text(newTask.title)
-  //         $li.appendTo($tasks);
-  //       }
-  //     });
-  //
-  //     var $task = $('#4task');
-  //     var $title = $('input[name="title"]');
-  //     var $priority = $('input[name="priority"]');
-  //     var $status =  $('input[name="status"]');
-  //     var $description = $('input[name="description"]');
-  //
-  //
-  //     $task.submit(function() {
-  //       console.log('you submitted the form');
-  //
-  //
-  //       $.ajax({
-  //         method: 'post',
-  //         url: 'http://localhost:8000/api/tasks/',
-  //         // username: 'david',
-  //         // password: 'password123',
-  //         data: {
-  //           title: $title.val(),
-  //           priority: $priority.val() ,
-  //           status: $status.val(),
-  //           description: $description.val()
-  //         },
-  //         success: function(newTask) {
-  //           console.log(newTask)
-  //           var $li = $('<li>');
-  //           $li.text(newTask.title)
-  //           $li.appendTo($tasks);
-  //         }
-  //       });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

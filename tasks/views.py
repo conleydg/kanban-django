@@ -16,7 +16,8 @@ class TaskViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        return Task.objects.filter(auth_u_id=user.id)
+        qs = Task.objects.filter(auth_u_id=user.id)
+        return qs.order_by('priority')
         # return Task.objects.all().order_by('priority')
         # return self.request.user.task.all()
 
