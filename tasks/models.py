@@ -1,6 +1,8 @@
 from django.db import models
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
+from django.contrib.auth.models import User
+
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
@@ -22,6 +24,8 @@ class Task(models.Model):
     priority = models.IntegerField(choices=urgency_level, default=2)
     status = models.IntegerField(choices=status_choices, default=1)
     description = models.TextField()
+    auth_u = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
 
     def __str__(self):
-        return self.task_title
+        return self.title

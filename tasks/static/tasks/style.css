@@ -1,0 +1,25 @@
+.checkboxes label {
+  float: left;
+}
+.checkboxes ul {
+  margin: 0;
+  list-style: none;
+  float: left;
+}
+
+
+div {
+    /* inset shadow for visual aid only: allow to easily see the div boundaries */
+    box-shadow: 0 0 1px black inset;
+}
+
+#contentBox {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#contentBox .column {
+    float: left;
+    margin: 0;
+    width: 25%;
+}
