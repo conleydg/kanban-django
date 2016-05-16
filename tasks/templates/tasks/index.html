@@ -1,0 +1,87 @@
+
+{% extends "tasks/base.html" %}
+<!DOCTYPE html>
+{% block content %}
+{% load staticfiles %}
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tasks</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'tasks/style.css' %}" />
+  </head>
+  <body>
+
+  <div id="contentBox">
+    <div class="column">
+
+
+    <ul id="1tasks">
+      <lh>Urgent
+
+    </ul>
+
+
+
+
+  </div>
+  </div>
+  <div id="contentBox">
+    <div class="column">
+
+
+    <ul id="2tasks">
+      <lh>Pressing
+
+    </ul>
+
+
+  </div>
+  </div>
+
+
+
+  <div id="contentBox">
+    <div class="column">
+
+
+    <ul id="3tasks">
+      <lh>Not Urgent
+
+    </ul>
+
+
+
+
+  </div>
+  </div>
+
+
+  <div id="contentBox">
+    <div class="column">
+
+
+    <ul id="4tasks">
+      <lh>No Rush
+
+    </ul>
+
+
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="{% static "tasks/kanban.js" %}""></script>
+  </body>
+  {% endblock  %}
+</html>

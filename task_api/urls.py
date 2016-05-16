@@ -13,6 +13,7 @@ router.register(r'groups', views.GroupViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
+    url(r'^$', views.index, name='index'),
     url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r"^bootstrap_ui/", include("bootstrap_ui.urls")),

@@ -112,97 +112,97 @@ $task.submit(function() {
       $li.appendTo($tasks);
     }
   });
-  //
-  //
-  // var $task = $('#2task');
-  // var $title = $('input[name="title"]');
-  // var $priority = $('input[name="priority"]');
-  // var $status =  $('input[name="status"]');
-  // var $description = $('input[name="description"]');
-  //
-  //
-  // $task.submit(function() {
-  //   console.log('you submitted the form');
-  //
-  //
-  //   $.ajax({
-  //     method: 'post',
-  //     url: 'http://localhost:8000/api/tasks/',
-  //     // username: 'david',
-  //     // password: 'password123',
-  //     data: {
-  //       title: $title.val(),
-  //       priority: $priority.val() ,
-  //       status: $status.val(),
-  //       description: $description.val()
-  //     },
-  //     success: function(newTask) {
-  //       console.log(newTask)
-  //       var $li = $('<li>');
-  //       $li.text(newTask.title)
-  //       $li.appendTo($tasks);
-  //     }
-  //   });
-  //
-  //   var $task = $('#3task');
-  //   var $title = $('input[name="title"]');
-  //   var $priority = $('input[name="priority"]');
-  //   var $status =  $('input[name="status"]');
-  //   var $description = $('input[name="description"]');
-  //
-  //
-  //   $task.submit(function() {
-  //     console.log('you submitted the form');
-  //
-  //
-  //     $.ajax({
-  //       method: 'post',
-  //       url: 'http://localhost:8000/api/tasks/',
-  //       // username: 'david',
-  //       // password: 'password123',
-  //       data: {
-  //         title: $title.val(),
-  //         priority: $priority.val() ,
-  //         status: $status.val(),
-  //         description: $description.val()
-  //       },
-  //       success: function(newTask) {
-  //         console.log(newTask)
-  //         var $li = $('<li>');
-  //         $li.text(newTask.title)
-  //         $li.appendTo($tasks);
-  //       }
-  //     });
-  //
-  //     var $task = $('#4task');
-  //     var $title = $('input[name="title"]');
-  //     var $priority = $('input[name="priority"]');
-  //     var $status =  $('input[name="status"]');
-  //     var $description = $('input[name="description"]');
-  //
-  //
-  //     $task.submit(function() {
-  //       console.log('you submitted the form');
-  //
-  //
-  //       $.ajax({
-  //         method: 'post',
-  //         url: 'http://localhost:8000/api/tasks/',
-  //         // username: 'david',
-  //         // password: 'password123',
-  //         data: {
-  //           title: $title.val(),
-  //           priority: $priority.val() ,
-  //           status: $status.val(),
-  //           description: $description.val()
-  //         },
-  //         success: function(newTask) {
-  //           console.log(newTask)
-  //           var $li = $('<li>');
-  //           $li.text(newTask.title)
-  //           $li.appendTo($tasks);
-  //         }
-  //       });
+
+
+  var $task = $('#2task');
+  var $title = $('input[name="title"]');
+  var $priority = $('input[name="priority"]');
+  var $status =  $('input[name="status"]');
+  var $description = $('input[name="description"]');
+
+
+  $task.submit(function() {
+    console.log('you submitted the form');
+
+
+    $.ajax({
+      method: 'post',
+      url: 'http://localhost:8000/api/tasks/',
+      // username: 'david',
+      // password: 'password123',
+      data: {
+        title: $title.val(),
+        priority: $priority.val() ,
+        status: $status.val(),
+        description: $description.val()
+      },
+      success: function(newTask) {
+        console.log(newTask)
+        var $li = $('<li>');
+        $li.text(newTask.title)
+        $li.appendTo($tasks);
+      }
+    });
+
+    var $task = $('#3task');
+    var $title = $('input[name="title"]');
+    var $priority = $('input[name="priority"]');
+    var $status =  $('input[name="status"]');
+    var $description = $('input[name="description"]');
+
+
+    $task.submit(function() {
+      console.log('you submitted the form');
+
+
+      $.ajax({
+        method: 'post',
+        url: 'http://localhost:8000/api/tasks/',
+        // username: 'david',
+        // password: 'password123',
+        data: {
+          title: $title.val(),
+          priority: $priority.val() ,
+          status: $status.val(),
+          description: $description.val()
+        },
+        success: function(newTask) {
+          console.log(newTask)
+          var $li = $('<li>');
+          $li.text(newTask.title)
+          $li.appendTo($tasks);
+        }
+      });
+
+      var $task = $('#4task');
+      var $title = $('input[name="title"]');
+      var $priority = $('input[name="priority"]');
+      var $status =  $('input[name="status"]');
+      var $description = $('input[name="description"]');
+
+
+      $task.submit(function() {
+        console.log('you submitted the form');
+
+
+        $.ajax({
+          method: 'post',
+          url: 'http://localhost:8000/api/tasks/',
+          // username: 'david',
+          // password: 'password123',
+          data: {
+            title: $title.val(),
+            priority: $priority.val() ,
+            status: $status.val(),
+            description: $description.val()
+          },
+          success: function(newTask) {
+            console.log(newTask)
+            var $li = $('<li>');
+            $li.text(newTask.title)
+            $li.appendTo($tasks);
+          }
+        });
 
 
 

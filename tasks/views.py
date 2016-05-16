@@ -4,9 +4,11 @@ from .models import Task
 from .serializers import TaskSerializer, UserSerializer, GroupSerializer
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Permission, User
+from django.shortcuts import render
 
 
-
+def index(request):
+    return render(request, 'tasks/index.html')
 
 class TaskViewSet(viewsets.ModelViewSet):
     # queryset = Task.objects.all().order_by('priority')
