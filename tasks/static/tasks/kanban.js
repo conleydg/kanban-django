@@ -36,13 +36,9 @@ $.get('http://localhost:8000/api/tasks/', function(tasks){
     console.log(task)
     var $li = $('<li>');
     $li.text(task.title);
-    $li.click(function(){
-      alert("The paragraph was clicked.");
-    });
+
     $li.appendTo($tasks);
-    var $button = $('<button>')
-    $button.text('Edit')
-    $button.appendTo($tasks)
+
 
 })
 })
@@ -70,7 +66,7 @@ $task.submit(function() {
       status: $status.val(),
       description: $description.val()
     },
-    success: function(newTask) {
+    done: function(newTask) {
       console.log(newTask)
       var $li = $('<li>');
       $li.text(newTask.title)
