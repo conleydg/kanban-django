@@ -74,7 +74,9 @@ $task.submit(function() {
       $('input[type="text"],textarea').val('');
       $('select').find('option').prop("selected", false);
       $('input[type=radio]').prop("checked", false);
-    }
+      
+    },
+
   });
 
 
